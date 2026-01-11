@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body */
 body {
     min-height: 100vh;
     background: linear-gradient(to bottom, #4facfe, #00f2fe);
@@ -15,7 +14,6 @@ body {
     align-items: center;
 }
 
-/* Main Container */
 .container {
     background: white;
     width: 100%;
@@ -25,7 +23,6 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-/* Header */
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -40,7 +37,6 @@ header p {
     color: #666;
 }
 
-/* Search Box */
 .search {
     display: flex;
     margin-bottom: 20px;
@@ -67,7 +63,6 @@ header p {
     background: #1e90ff;
 }
 
-/* Weather Card */
 .weather-card {
     background: linear-gradient(to right, #74ebd5, #9face6);
     border-radius: 16px;
@@ -76,14 +71,12 @@ header p {
     text-align: center;
 }
 
-/* Temperature */
 .temp {
     font-size: 48px;
     font-weight: bold;
     margin: 10px 0;
 }
 
-/* Details */
 .details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -101,14 +94,12 @@ header p {
     font-weight: bold;
 }
 
-/* Error */
 .error {
     text-align: center;
     color: red;
     margin-top: 10px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     font-size: 12px;
@@ -116,7 +107,6 @@ footer {
     color: #555;
 }
 
-/* Responsive */
 @media (max-width: 480px) {
     .temp {
         font-size: 40px;
