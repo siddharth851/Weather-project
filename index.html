@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <h1>Weather App</h1>
+        <p>Check today's weather</p>
+    </header>
+
+    <!-- Search Box -->
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Weather Card -->
+    <div class="weather-card">
+        <h2 id="city">City</h2>
+
+        <div class="temp">
+            <span id="temp">--</span>°C
+        </div>
+
+        <p id="condition">Condition</p>
+
+        <div class="details">
+            <div>
+                <span>Humidity</span>
+                <p id="humidity">--%</p>
+            </div>
+            <div>
+                <span>Wind</span>
+                <p id="wind">-- km/h</p>
+            </div>
+            <div>
+                <span>Sunrise</span>
+                <p id="sunrise">--</p>
+            </div>
+            <div>
+                <span>Sunset</span>
+                <p id="sunset">--</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Message -->
+    <p class="error" id="errorMsg"></p>
+
+    <!-- Footer -->
+    <footer>
+        Made using HTML, CSS & JavaScript
+    </footer>
+
+</div>
+
+<!-- JavaScript File -->
+<script src="script.js"></script>
+</body>
+</html>
