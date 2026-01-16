@@ -2,55 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Weather Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Weather Forecast</h1>
+            <p>Get weather updates for any city</p>
+            
+            <!-- Dark Mode Toggle -->
+            <button id="themeToggle" class="theme-btn">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </header>
 
-<div class="container">
-    <header>
-        <h1>Weather App</h1>
-        <p>Check today's weather</p>
-    </header>
-    <div class="search">
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="searchBtn">Search</button>
-    </div>
-
-    <div class="weather-card">
-        <h2 id="city">City</h2>
-
-        <div class="temp">
-            <span id="temp">--</span>°C
+        <!-- Search Section -->
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name (e.g., Lucknow)">
+            <button id="searchBtn">Search</button>
+            <button id="locationBtn" class="location-btn">📍</button>
         </div>
 
-        <p id="condition">Condition</p>
-
-        <div class="details">
-            <div>
-                <span>Humidity</span>
-                <p id="humidity">--%</p>
-            </div>
-            <div>
-                <span>Wind</span>
-                <p id="wind">-- km/h</p>
-            </div>
-            <div>
-                <span>Sunrise</span>
-                <p id="sunrise">--</p>
-            </div>
-            <div>
-                <span>Sunset</span>
-                <p id="sunset">--</p>
+        <!-- Current Weather Section -->
+        <div class="weather-card">
+            <h2 id="cityName">Enter a city to get started</h2>
+            
+            <div id="weatherIcon" class="weather-icon"></div>
+            
+            <div id="temperature" class="temperature"></div>
+            
+            <div id="condition" class="condition"></div>
+            
+            <div class="weather-details">
+                <div class="detail-box">
+                    <span class="icon">💧</span>
+                    <p>Humidity</p>
+                    <h3 id="humidity">--</h3>
+                </div>
+                <div class="detail-box">
+                    <span class="icon">💨</span>
+                    <p>Wind Speed</p>
+                    <h3 id="windSpeed">--</h3>
+                </div>
+                <div class="detail-box">
+                    <span class="icon">🌅</span>
+                    <p>Sunrise</p>
+                    <h3 id="sunrise">--</h3>
+                </div>
+                <div class="detail-box">
+                    <span class="icon">🌇</span>
+                    <p>Sunset</p>
+                    <h3 id="sunset">--</h3>
+                </div>
             </div>
         </div>
+
+        <!-- Famous Place Section -->
+        <div class="famous-place-card" id="famousPlace" style="display: none;">
+            <!-- Famous place content will be added here -->
+        </div>
+
+        <!-- 7-Day Forecast Section -->
+        <div class="forecast-section">
+            <h2>7-Day Forecast</h2>
+            <div class="forecast-grid" id="forecastContainer">
+                <!-- Forecast cards will be added here -->
+            </div>
+        </div>
+
     </div>
 
-    <p class="error" id="errorMsg"></p>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
