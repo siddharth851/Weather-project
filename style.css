@@ -53,7 +53,7 @@ body {
     font-size: 18px;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle */
 .theme-btn {
     position: absolute;
     top: 0;
@@ -78,12 +78,13 @@ body.dark-mode .moon-icon {
     display: inline;
 }
 
-/* Search Box */
+/* Search */
 .search-box {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 #cityInput {
@@ -135,11 +136,6 @@ body.dark-mode .location-btn {
     margin-bottom: 20px;
 }
 
-.weather-icon {
-    font-size: 100px;
-    margin: 20px 0;
-}
-
 .weather-icon img {
     width: 100px;
     height: 100px;
@@ -158,7 +154,7 @@ body.dark-mode .location-btn {
     margin-bottom: 30px;
 }
 
-/* Weather Details Grid */
+/* Weather Details */
 .weather-details {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -171,6 +167,11 @@ body.dark-mode .location-btn {
     padding: 20px;
     border-radius: 15px;
     border: 2px solid rgba(102, 126, 234, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.detail-box:hover {
+    transform: translateY(-5px);
 }
 
 body.dark-mode .detail-box {
@@ -179,14 +180,13 @@ body.dark-mode .detail-box {
 
 .detail-box .icon {
     font-size: 32px;
-    display: block;
     margin-bottom: 10px;
+    display: block;
 }
 
 .detail-box p {
     font-size: 14px;
     color: var(--text-light);
-    margin-bottom: 5px;
 }
 
 .detail-box h3 {
@@ -194,7 +194,7 @@ body.dark-mode .detail-box {
     color: var(--text-color);
 }
 
-/* Famous Place Card */
+/* Famous Place */
 .famous-place-card {
     background: var(--card-bg);
     border-radius: 30px;
@@ -222,14 +222,12 @@ body.dark-mode .detail-box {
     font-size: 18px;
     color: var(--text-light);
     line-height: 1.6;
-    margin-top: 15px;
 }
 
-.famous-place-card strong {
-    color: var(--text-color);
-}
+/* ===================== */
+/* 3-DAY FORECAST SECTION */
+/* ===================== */
 
-/* Forecast Section */
 .forecast-section {
     margin-top: 40px;
 }
@@ -241,10 +239,11 @@ body.dark-mode .detail-box {
     margin-bottom: 30px;
 }
 
+/* Proper 3 Equal Boxes */
 .forecast-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .forecast-card {
@@ -252,6 +251,11 @@ body.dark-mode .detail-box {
     border-radius: 20px;
     padding: 25px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
 }
 
 .forecast-day {
@@ -279,23 +283,11 @@ body.dark-mode .detail-box {
     color: var(--text-light);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
+
     .header h1 {
         font-size: 32px;
-    }
-
-    .theme-btn {
-        position: static;
-        margin-top: 20px;
-    }
-
-    .search-box {
-        flex-wrap: wrap;
-    }
-
-    #searchBtn {
-        flex: 1;
     }
 
     .weather-details {
@@ -303,15 +295,12 @@ body.dark-mode .detail-box {
     }
 
     .forecast-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .famous-place-card img {
-        height: 200px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
+
     body {
         padding: 10px;
     }
@@ -333,7 +322,7 @@ body.dark-mode .detail-box {
     }
 
     .forecast-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .famous-place-card img {
