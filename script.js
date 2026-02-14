@@ -1,11 +1,8 @@
-// ==============================
-// API KEY
-// ==============================
+
 const API_KEY = 'e7d0c2d0e98a4c09a6833540261402';
 
-// ==============================
 // Famous Places Data
-// ==============================
+
 const famousPlaces = {
     'lucknow': {
         name: 'Bara Imambara',
@@ -29,9 +26,8 @@ const famousPlaces = {
     }
 };
 
-// ==============================
 // THEME TOGGLE
-// ==============================
+
 document.getElementById('themeToggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem(
@@ -44,9 +40,8 @@ if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
 }
 
-// ==============================
 // SEARCH BUTTON
-// ==============================
+
 document.getElementById('searchBtn').addEventListener('click', () => {
     const city = document.getElementById('cityInput').value.trim();
     if (city) fetchWeather(city);
@@ -61,9 +56,8 @@ document.getElementById('cityInput').addEventListener('keypress', (e) => {
     }
 });
 
-// ==============================
 // LOCATION BUTTON
-// ==============================
+
 document.getElementById('locationBtn').addEventListener('click', () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -79,9 +73,8 @@ document.getElementById('locationBtn').addEventListener('click', () => {
     }
 });
 
-// ==============================
-// FETCH WEATHER (7 DAYS)
-// ==============================
+// FETCH WEATHER 
+
 async function fetchWeather(city) {
     try {
         const response = await fetch(
@@ -103,14 +96,11 @@ async function fetchWeather(city) {
     }
 }
 
-// ==============================
-// DISPLAY WEATHER
-// ==============================
+
 function displayWeather(data) {
 
-    // ------------------------------
     // CURRENT WEATHER
-    // ------------------------------
+    
     document.getElementById('cityName').textContent =
         `${data.location.name}, ${data.location.country}`;
 
@@ -135,9 +125,8 @@ function displayWeather(data) {
     document.getElementById('sunset').textContent =
         data.forecast.forecastday[0].astro.sunset;
 
-    // ------------------------------
     // FAMOUS PLACE
-    // ------------------------------
+
     const cityLower = data.location.name.toLowerCase();
     const place = famousPlaces[cityLower] || famousPlaces['default'];
 
@@ -151,9 +140,8 @@ function displayWeather(data) {
         <p>${place.description}</p>
     `;
 
-    // ------------------------------
-    // 7-DAY FORECAST
-    // ------------------------------
+    // 3-DAY FORECAST
+
     const forecastContainer = document.getElementById('forecastContainer');
     forecastContainer.innerHTML = '';
 
@@ -181,9 +169,6 @@ function displayWeather(data) {
     });
 }
 
-// ==============================
-// LOAD DEFAULT CITY
-// ==============================
 window.addEventListener('load', () => {
     document.getElementById('cityInput').value = 'Lucknow';
     fetchWeather('Lucknow');

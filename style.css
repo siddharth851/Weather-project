@@ -1,11 +1,10 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Light Theme Colors */
 :root {
     --bg-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --card-bg: #ffffff;
@@ -14,7 +13,6 @@
     --accent-color: #667eea;
 }
 
-/* Dark Theme Colors */
 body.dark-mode {
     --bg-color: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
     --card-bg: #2d3748;
@@ -36,7 +34,6 @@ body {
     width: 100%;
 }
 
-/* Header */
 .header {
     text-align: center;
     color: white;
@@ -53,7 +50,6 @@ body {
     font-size: 18px;
 }
 
-/* Theme Toggle */
 .theme-btn {
     position: absolute;
     top: 0;
@@ -78,7 +74,6 @@ body.dark-mode .moon-icon {
     display: inline;
 }
 
-/* Search */
 .search-box {
     display: flex;
     justify-content: center;
@@ -121,7 +116,6 @@ body.dark-mode .location-btn {
     font-size: 20px;
 }
 
-/* Weather Card */
 .weather-card {
     background: var(--card-bg);
     border-radius: 30px;
@@ -154,7 +148,6 @@ body.dark-mode .location-btn {
     margin-bottom: 30px;
 }
 
-/* Weather Details */
 .weather-details {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -194,7 +187,6 @@ body.dark-mode .detail-box {
     color: var(--text-color);
 }
 
-/* Famous Place */
 .famous-place-card {
     background: var(--card-bg);
     border-radius: 30px;
@@ -224,9 +216,6 @@ body.dark-mode .detail-box {
     line-height: 1.6;
 }
 
-/* ===================== */
-/* 3-DAY FORECAST SECTION */
-/* ===================== */
 
 .forecast-section {
     margin-top: 40px;
@@ -239,7 +228,6 @@ body.dark-mode .detail-box {
     margin-bottom: 30px;
 }
 
-/* Proper 3 Equal Boxes */
 .forecast-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -283,7 +271,6 @@ body.dark-mode .detail-box {
     color: var(--text-light);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
 
     .header h1 {
